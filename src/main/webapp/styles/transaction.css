@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url(../assets/images/transaction/payment-frame.png);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before, body::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+body::before {
+    background-color: rgba(0, 102, 204, 0.6);
+    top: -100px;
+    right: -100px;
+}
+
+body::after {
+    background-color: rgba(153, 51, 255, 0.6);
+    bottom: -100px;
+    right: 30%;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1100px;
+    height: 500px;
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.left-panel {
+    width: 40%;
+    background-color: white;
+    padding: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 20px;
+}
+
+.pbs-open {
+    font-size: 20px;
+    width: 100%;
+    background-color: #ffd700;
+    color: white;
+    padding: 5px 15px;
+    font-weight: bold;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    margin-top: 0 0 20px 0;
+}
+
+.logo {
+    width: 100%;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.tournament-logo {
+    width: min(100%, 285px);
+    max-width: 550px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+    padding-top: 15px;
+}
+
+.tournament-logo:hover {
+    transform: scale(1.05);
+}
+
+.mixed-doubles-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    color: #333;
+}
+
+.mixed-doubles-text div:last-child {
+    font-size: 18px;
+}
+
+.title {
+    padding-top: 15px;
+    font-size: 3.4rem;
+    font-weight: bold;
+    color: #0066cc;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    font-family: "Bebas Neue", times-new-roman;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0066cc;
+    font-size: 18px;
+    margin-top: auto;
+    font-weight: bold;
+}
+
+.date-info {
+    font-family: "Bebas Neue", times-new-roman;
+}
+
+.calendar-icon {
+    margin-right: 10px;
+}
+
+.right-panel {
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.transfer-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%; /* Added */
+    min-width: min-content; /* Added for content-based width */
+}
+
+.transfer-title {
+    color: #0066cc;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.qr-code {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.qr-code img {
+    width: 150px;
+    height: 150px;
+}
+
+.bank-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin: 0 auto;
+}
+
+td {
+    padding: 8px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.label {
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    min-width: 120px;
+    margin-right: 10px;
+    text-align: center;
+    white-space: nowrap; 
+    text-align: center;
+}
+
+.value {
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap; 
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+    }
+
+    .left-panel {
+        padding-bottom: 30px;
+    }
+}
